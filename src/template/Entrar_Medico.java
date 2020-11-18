@@ -32,14 +32,16 @@ public class Entrar_Medico extends javax.swing.JFrame {
         int posicao = 120;
         int i = 0;
         Medico m = medicos.get(pos);
+        lNome.setText(m.getNome());
         for (Paciente paciente : m.ListaPacientes) {
             JLabel label = new JLabel();
             label.setVisible(true);
             label.setText(paciente.getNome());
-            label.setSize(100, 40);
-            label.setLocation(40, posicao + 15);
+            label.setSize(paciente.getNome().length() * 100, 40);
+            label.setLocation(40, posicao);
             this.add(label);
             this.repaint();
+            
             JButton button = new JButton("Prontuário");
             button.setVisible(true);
             button.setName(Integer.toString(i));
@@ -49,10 +51,23 @@ public class Entrar_Medico extends javax.swing.JFrame {
                 dispose();
             });
             button.setSize(100, 20);
-            button.setLocation(300, posicao + 30);
+            button.setLocation(300, posicao + 15);
             this.add(button);
             this.repaint();
-            posicao += 35;
+            
+            JButton button1 = new JButton("Visualizar Paciente");
+            button1.setVisible(true);
+            button1.setName(Integer.toString(i));
+            button1.addActionListener((ActionEvent e) -> {
+                Visualizar_Paciente vp = new Visualizar_Paciente(medicos, Integer.parseInt(button.getName()), pos);
+                vp.setVisible(true);
+                dispose();
+            });
+            button1.setSize(170, 20);
+            button1.setLocation(450, posicao + 15);
+            this.add(button1);
+            this.repaint();
+            posicao += 50;
             i++;
         }
         posTela = pos;
@@ -62,11 +77,7 @@ public class Entrar_Medico extends javax.swing.JFrame {
     Entrar_Medico() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    public void exportaNome(Medico m){
-        txNome.setText(m.getNome());
-    }
-    
+        
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -76,7 +87,7 @@ public class Entrar_Medico extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        txNome = new javax.swing.JLabel();
+        lNome = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         btCadastrar = new javax.swing.JButton();
@@ -89,7 +100,7 @@ public class Entrar_Medico extends javax.swing.JFrame {
             }
         });
 
-        txNome.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
+        lNome.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
         jLabel3.setText("Olá,");
@@ -126,9 +137,9 @@ public class Entrar_Medico extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txNome))
+                        .addComponent(lNome, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel1))
-                .addGap(58, 291, Short.MAX_VALUE))
+                .addGap(183, 206, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,14 +151,14 @@ public class Entrar_Medico extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel3)
-                    .addComponent(txNome, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lNome, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addComponent(btCadastrar)
                 .addGap(3, 3, 3)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 206, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 351, Short.MAX_VALUE)
                 .addComponent(jButton5)
                 .addContainerGap())
         );
@@ -216,6 +227,6 @@ public class Entrar_Medico extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel txNome;
+    private javax.swing.JLabel lNome;
     // End of variables declaration//GEN-END:variables
 }

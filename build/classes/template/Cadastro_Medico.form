@@ -64,9 +64,9 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="txIdade" min="-2" pref="48" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="txEspecialidade" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="txTelefone1" max="32767" attributes="0"/>
+                              <Component id="txEspecialidade" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -108,8 +108,8 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txIdade" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txEspecialidade" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txTelefone1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -204,7 +204,10 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txCpf">
     </Component>
-    <Component class="javax.swing.JTextField" name="txTelefone1">
+    <Component class="javax.swing.JTextField" name="txEspecialidade">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txEspecialidadeActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel9">
       <Properties>
@@ -214,7 +217,7 @@
         <Property name="text" type="java.lang.String" value="Idade:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="txEspecialidade">
+    <Component class="javax.swing.JLabel" name="jLabel10">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="18" style="0"/>

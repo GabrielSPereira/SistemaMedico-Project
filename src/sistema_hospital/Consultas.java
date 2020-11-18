@@ -5,14 +5,36 @@
  */
 package sistema_hospital;
 
-import java.util.Date;
-
 /**
  *
  * @author GABRIEL
  */
 public class Consultas {
-    public int Numero;
-    public String Descricao;
-    public Date data;
+    protected int Numero;
+    protected String Descricao;
+    protected String Data;
+    
+    public void setNumero(int Numero) {
+        this.Numero = Numero;
+    }
+    
+    public int getNumero() {
+        return this.Numero;
+    }
+    
+    public void setDescricao(String Descricao) {
+        this.Descricao = Descricao;
+    }
+    
+    public String getDescricao() {
+        return this.Descricao;
+    }
+    
+    public void setData(String Data) {
+        this.Data = Data;
+    }
+    
+    public String getData() {
+        return this.Data;
+    }
 }

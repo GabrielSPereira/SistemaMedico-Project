@@ -13,4 +13,7 @@ import java.util.ArrayList;
  */
 public class Paciente extends Pessoa {
     public ArrayList<Exames> ListaExames = new ArrayList<>();
+    public ArrayList<Medicamentos> ListaMedicamentos = new ArrayList<>();
+    public ArrayList<Ocorrencias> ListaOcorrencias = new ArrayList<>();
+    public ArrayList<Consultas> ListaConsultas = new ArrayList<>();
 }

@@ -5,16 +5,15 @@
  */
 package sistema_hospital;
 
-import java.util.Date;
-
 /**
  *
  * @author GABRIEL
  */
 public class Exames {
-    public int Numero;
-    public String Descricao;
-    public String Data;
+    protected int Numero;
+    protected String Descricao;
+    protected String Resultado;
+    protected String Data;
     
     public void setNumero(int Numero) {
         this.Numero = Numero;
@@ -30,6 +29,14 @@ public class Exames {
     
     public String getDescricao() {
         return this.Descricao;
+    }
+    
+    public void setResultado(String Resultado) {
+        this.Resultado = Resultado;
+    }
+    
+    public String getResultado() {
+        return this.Resultado;
     }
     
     public void setData(String Data) {

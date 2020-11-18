@@ -30,9 +30,10 @@ public class Listar_Medicos extends javax.swing.JFrame {
             label.setVisible(true);
             label.setText(medico.getNome());
             label.setSize(100, 40);
-            label.setLocation(40, posicao + 15);
+            label.setLocation(40, posicao);
             this.add(label);
             this.repaint();
+            
             JButton button = new JButton("Entrar Médico");
             button.setVisible(true);
             button.setName(Integer.toString(i));
@@ -41,11 +42,24 @@ public class Listar_Medicos extends javax.swing.JFrame {
                 em.setVisible(true);
                 dispose();
             });
-            button.setSize(100, 20);
-            button.setLocation(300, posicao + 30);
+            button.setSize(130, 20);
+            button.setLocation(250, posicao + 15);
             this.add(button);
             this.repaint();
-            posicao += 35;
+            
+            JButton button1 = new JButton("Visualizar Médico");
+            button1.setVisible(true);
+            button1.setName(Integer.toString(i));
+            button1.addActionListener((ActionEvent e) -> {
+                Visualizar_Medico vm = new Visualizar_Medico(medicos, Integer.parseInt(button.getName()));
+                vm.setVisible(true);
+                dispose();
+            });
+            button1.setSize(170, 20);
+            button1.setLocation(400, posicao + 15);
+            this.add(button1);
+            this.repaint();
+            posicao += 50;
             i++;
         }
         medicosTela = medicos;
@@ -88,7 +102,7 @@ public class Listar_Medicos extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 249, Short.MAX_VALUE)
+                        .addGap(0, 490, Short.MAX_VALUE)
                         .addComponent(btCadastrar)))
                 .addContainerGap())
         );
@@ -99,7 +113,7 @@ public class Listar_Medicos extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
                 .addComponent(btCadastrar)
-                .addContainerGap(193, Short.MAX_VALUE))
+                .addContainerGap(382, Short.MAX_VALUE))
         );
 
         pack();

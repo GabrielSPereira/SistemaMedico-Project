@@ -48,9 +48,9 @@ public class Cadastro_Medico extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         txCpf = new javax.swing.JTextField();
-        txTelefone1 = new javax.swing.JTextField();
+        txEspecialidade = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        txEspecialidade = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         txIdade = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -89,11 +89,17 @@ public class Cadastro_Medico extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel7.setText("Telefone:");
 
+        txEspecialidade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txEspecialidadeActionPerformed(evt);
+            }
+        });
+
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel9.setText("Idade:");
 
-        txEspecialidade.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        txEspecialidade.setText("Especialidade:");
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel10.setText("Especialidade:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -134,9 +140,9 @@ public class Cadastro_Medico extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(txIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(txEspecialidade)
+                                .addComponent(jLabel10)
                                 .addGap(18, 18, 18)
-                                .addComponent(txTelefone1)))))
+                                .addComponent(txEspecialidade)))))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -168,8 +174,8 @@ public class Cadastro_Medico extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(txIdade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txEspecialidade)
-                    .addComponent(txTelefone1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel10)
+                    .addComponent(txEspecialidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
@@ -201,6 +207,10 @@ public class Cadastro_Medico extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void txEspecialidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txEspecialidadeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txEspecialidadeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -235,6 +245,7 @@ public class Cadastro_Medico extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -245,11 +256,10 @@ public class Cadastro_Medico extends javax.swing.JFrame {
     private javax.swing.JTextField txCpf;
     private javax.swing.JTextField txCrm;
     private javax.swing.JTextField txEndereco;
-    private javax.swing.JLabel txEspecialidade;
+    private javax.swing.JTextField txEspecialidade;
     private javax.swing.JTextField txIdade;
     private javax.swing.JTextField txNome;
     private javax.swing.JTextField txRg;
     private javax.swing.JTextField txTelefone;
-    private javax.swing.JTextField txTelefone1;
     // End of variables declaration//GEN-END:variables
 }

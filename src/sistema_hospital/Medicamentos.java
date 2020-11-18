@@ -11,5 +11,30 @@ package sistema_hospital;
  */
 public class Medicamentos {
     public String Nome;
+    public String Descricao;
     public String Possologia;
+    
+    public void setNome(String Nome) {
+        this.Nome = Nome;
+    }
+    
+    public String getNome() {
+        return this.Nome;
+    }
+    
+    public void setDescricao(String Descricao) {
+        this.Descricao = Descricao;
+    }
+    
+    public String getDescricao() {
+        return this.Descricao;
+    }
+    
+    public void setPossologia(String Possologia) {
+        this.Possologia = Possologia;
+    }
+    
+    public String getPossologia() {
+        return this.Possologia;
+    }
 }
